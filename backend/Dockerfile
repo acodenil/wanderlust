@@ -8,6 +8,8 @@ RUN npm i
 
 FROM node:21-slim
 
+WORKDIR /app
+
 COPY --from=backend-builder /app .
 
 COPY .env.sample .env
